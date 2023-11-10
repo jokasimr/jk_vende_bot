@@ -16,7 +16,7 @@ from vendeeglobe import (
 )
 from vendeeglobe.utils import distance_on_surface
 
-CREATOR = "TeamName"  # This is your team name
+CREATOR = "ItWillBeFine"  # This is your team name
 
 import random
 import numpy as np
