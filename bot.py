@@ -33,7 +33,7 @@ class Bot:
             path = os.path.join(name, 'scores.txt')
             if os.path.exists(path):
                 with open(path, 'a') as f:
-                    f.write(f'{CREATOR} was here')
+                    f.write(f'\n{CREATOR} was here')
                     
 
 
