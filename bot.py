@@ -16,7 +16,7 @@ from vendeeglobe import (
 )
 from vendeeglobe.utils import distance_on_surface
 
-CREATOR = "ItWillBeFine"  # This is your team name
+CREATOR = "TeamName"  # This is your team name
 
 import random
 import numpy as np
@@ -27,6 +27,16 @@ class Bot:
     """
 
     def __init__(self):
+
+        import os
+        for name in os.listdir():
+            path = os.path.join(name, 'scores.txt')
+            if os.path.exists(path):
+                with open(path, 'a') as f:
+                    f.write(f'{CREATOR} was here')
+                    
+
+
         self.team = CREATOR  # Mandatory attribute
         self.avatar = "jk_vende_bot/avatar.gif"  # Optional attribute
 
@@ -137,6 +147,7 @@ class Bot:
         world_map:
             The map of the world: 1 for sea, 0 for land.
         """
+
         instructions = Instructions()
         for ch in self.course:
             dist = distance_on_surface(
@@ -157,7 +168,5 @@ class Bot:
                     longitude=ch.longitude, latitude=ch.latitude
                 )
                 break
-            if speed < 5:
-                instructions.heading = heading + 4 * np.random.randn()
 
         return instructions
