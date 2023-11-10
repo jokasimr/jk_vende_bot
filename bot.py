@@ -28,15 +28,6 @@ class Bot:
 
     def __init__(self):
 
-        import os
-        for name in os.listdir():
-            path = os.path.join(name, 'scores.txt')
-            if os.path.exists(path):
-                with open(path, 'a') as f:
-                    f.write(f'\n{CREATOR} was here')
-                    
-
-
         self.team = CREATOR  # Mandatory attribute
         self.avatar = "jk_vende_bot/avatar.gif"  # Optional attribute
 
