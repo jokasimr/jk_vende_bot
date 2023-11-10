@@ -18,6 +18,8 @@ from vendeeglobe.utils import distance_on_surface
 
 CREATOR = "TeamName"  # This is your team name
 
+import random
+import numpy as np
 
 class Bot:
     """
@@ -26,7 +28,7 @@ class Bot:
 
     def __init__(self):
         self.team = CREATOR  # Mandatory attribute
-        self.avatar = "jk_vende_bot/avatar-transparent.png"  # Optional attribute
+        self.avatar = "jk_vende_bot/avatar.gif"  # Optional attribute
 
         self.course = [
             Checkpoint(latitude=19.069698, longitude= -67.166883, radius=50),
@@ -155,5 +157,7 @@ class Bot:
                     longitude=ch.longitude, latitude=ch.latitude
                 )
                 break
+            if speed < 5:
+                instructions.heading = heading + 4 * np.random.randn()
 
         return instructions
