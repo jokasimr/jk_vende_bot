@@ -26,7 +26,59 @@ class Bot:
 
     def __init__(self):
         self.team = CREATOR  # Mandatory attribute
-        self.avatar = 1  # Optional attribute
+        self.avatar = "jk_vende_bot/avatar-transparent.png"  # Optional attribute
+
+        self.course = [
+            Checkpoint(latitude=19.069698, longitude= -67.166883, radius=50),
+            Checkpoint(latitude=18.150004, longitude= -68.258117, radius=50),
+            Checkpoint(latitude=17.026520, longitude= -68.878516, radius=50),
+            Checkpoint(latitude=14.022048, longitude= -74.434660, radius=50),
+            Checkpoint(latitude=9.802589, longitude= -81.129015, radius=50),
+            Checkpoint(latitude=8.893603, longitude= -79.492349, radius=50),
+            Checkpoint(latitude=5.598162, longitude= -78.230821, radius=50),
+            Checkpoint(latitude=16.768590, longitude= -160.150297, radius=50),
+            Checkpoint(latitude=17.723622, longitude= -169.754068, radius=50),
+            Checkpoint(latitude=7.946156, longitude= 134.545313, radius=50),
+            Checkpoint(latitude=5.340338, longitude= 125.777469, radius=50),
+            Checkpoint(latitude=2.336296, longitude= 120.490082, radius=50),
+            Checkpoint(latitude=-0.836084, longitude= 118.587360, radius=50),
+            Checkpoint(latitude=-4.201526, longitude= 117.390125, radius=50),
+            Checkpoint(latitude=-5.092431, longitude= 112.787736, radius=50),
+            Checkpoint(latitude=-5.604317, longitude= 106.043190, radius=50),
+            Checkpoint(latitude=-5.839524, longitude= 105.726030, radius=50),
+
+            Checkpoint(latitude=-5.976526, longitude= 105.619868, radius=50),
+
+            Checkpoint(latitude=-6.514981, longitude= 105.612105, radius=50),
+            Checkpoint(latitude=-6.63397, longitude= 105.214215, radius=50),
+            Checkpoint(latitude=-8.781315, longitude= 76.069988, radius=50),
+            Checkpoint(latitude=9.037740, longitude= 64.598015, radius=50),
+            Checkpoint(latitude=13.825921, longitude= 54.472747, radius=50),
+            Checkpoint(latitude=11.902736, longitude= 44.600362, radius=50),
+            Checkpoint(latitude=12.642493, longitude= 43.275341, radius=50),
+            Checkpoint(latitude=15.024852, longitude= 41.971500, radius=50),
+            Checkpoint(latitude=25.536587, longitude= 35.723644, radius=50),
+            Checkpoint(latitude=28.078345, longitude= 33.535253, radius=50),
+            Checkpoint(latitude=28.951397, longitude= 32.836814, radius=50),
+            Checkpoint(latitude=29.930378, longitude= 32.537955, radius=50),
+            Checkpoint(latitude=30.909998, longitude= 32.353132, radius=50),
+            Checkpoint(latitude=32.909998, longitude= 32.353132, radius=50),
+            Checkpoint(latitude=32.942841, longitude= 26.912203, radius=50),
+            Checkpoint(latitude=36.300864, longitude= 15.321960, radius=50),
+            Checkpoint(latitude=37.866955, longitude= 10.996238, radius=50),
+            Checkpoint(latitude=37.630378, longitude= 2.526095, radius=50),
+            Checkpoint(latitude=36.016696, longitude= -4.312707, radius=50),
+            Checkpoint(latitude=35.941754, longitude= -5.602107, radius=50),
+            Checkpoint(latitude=36.221094, longitude= -11.882399, radius=50),
+            Checkpoint(latitude=43.288277, longitude= -13.552321, radius=50),
+            Checkpoint(
+                latitude=config.start.latitude,
+                longitude=config.start.longitude,
+                radius=5,
+            ),
+        ]
+
+        '''
         self.course = [
             Checkpoint(latitude=43.797109, longitude=-11.264905, radius=50),
             Checkpoint(longitude=-29.908577, latitude=17.999811, radius=50),
@@ -44,6 +96,7 @@ class Bot:
                 radius=5,
             ),
         ]
+        '''
 
     def run(
         self,
